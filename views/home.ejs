@@ -1,0 +1,10 @@
+<%- include("partials/header"); -%>
+  <h1>Home Page</h1>
+  <p><%= lorem1 %></p>
+<% blogEntries.forEach(function(post){ %>
+  <h1> <%= post.postTitle %> </h1>
+  <p> <%= post.postMsg.substring(0, 100) + "..." %>
+  <a href="/entry/<%=post.postTitle%>">Read more</a>
+  </p>
+<% }) %>
+<%- include("partials/footer"); -%>
